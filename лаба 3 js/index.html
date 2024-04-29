@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление транзакциями</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Управление транзакциями</h1>
+
+    <!-- Форма для добавления новой транзакции -->
+    <form id="transactionForm">
+        <label for="dateInput">Дата и время:</label>
+        <input type="datetime-local" id="dateInput" required><br>
+        <label for="amountInput">Сумма:</label>
+        <input type="number" id="amountInput" required><br>
+        <label for="categoryInput">Категория:</label>
+        <select id="categoryInput" required>
+            <option value="Доход">Доход</option>
+            <option value="Расход">Расход</option>
+        </select><br>
+        <label for="descriptionInput">Описание:</label>
+        <input type="text" id="descriptionInput" required><br>
+        <button type="submit">Добавить транзакцию</button>
+    </form>
+
+    <!-- Таблица для отображения транзакций -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Дата и время</th>
+                <th>Категория обращения</th>
+                <th>Краткое описание прохождения</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+            <!-- Строки транзакций -->
+        </tbody>
+    </table>
+
+    <!-- Общая сумма транзакций -->
+    <div id="totalAmount"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
